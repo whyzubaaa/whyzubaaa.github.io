@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zubair — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>Zubair<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"    data-i18n="nav-about">О себе</a></li>
+      <li><a href="#skills"   data-i18n="nav-skills">Навыки</a></li>
+      <li><a href="#projects" data-i18n="nav-projects">Проекты</a></li>
+      <li><a href="#contact"  data-i18n="nav-contact">Контакты</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting" data-i18n="hero-greeting">Привет, мир! 👋</p>
+      <h1 class="hero-name">Zubair</h1>
+      <div class="hero-subtitle">
+        <span class="typing-prefix">// </span>
+        <span class="typing-text" id="typingText"></span>
+        <span class="cursor">|</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero-btn-projects">Посмотреть проекты</a>
+        <a href="#contact"  class="btn btn-outline"  data-i18n="hero-btn-contact">Связаться</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">01.</span>
+        <span data-i18n="about-title">О себе</span>
+      </h2>
+      <div class="about-grid">
+        <div class="avatar-wrapper">
+          <div class="avatar">Z</div>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="about-text">
+          <p data-i18n="about-bio-1">Привет! Меня зовут <strong class="neon-text">Zubair</strong>. Я веб- и мобильный разработчик, создаю сайты и приложения на JavaScript и Flutter.</p>
+          <p data-i18n="about-bio-2">Мне нравится строить вещи с нуля — от идеи до готового продукта. Работаю с вебом и мобильными платформами, постоянно изучаю что-то новое.</p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-label" data-i18n="stat-projects">Проектов</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="6">0</span>
+              <span class="stat-label" data-i18n="stat-tech">Технологий</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="100">0</span>
+              <span class="stat-label" data-i18n="stat-motivation">% Мотивации</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">02.</span>
+        <span data-i18n="skills-title">Навыки</span>
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-html5 skill-icon html-icon"></i>
+          <span class="skill-name">HTML5</span>
+          <span class="skill-tag" data-i18n="sk-html">Разметка</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt skill-icon css-icon"></i>
+          <span class="skill-name">CSS3</span>
+          <span class="skill-tag" data-i18n="sk-css">Стили</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-js skill-icon js-icon"></i>
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-tag" data-i18n="sk-js">Логика</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-mobile-screen skill-icon dart-icon"></i>
+          <span class="skill-name">Flutter</span>
+          <span class="skill-tag" data-i18n="sk-flutter">Мобайл</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-d skill-icon dart2-icon"></i>
+          <span class="skill-name">Dart</span>
+          <span class="skill-tag" data-i18n="sk-dart">Язык</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-git-alt skill-icon git-icon"></i>
+          <span class="skill-name">Git</span>
+          <span class="skill-tag" data-i18n="sk-git">Версии</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">03.</span>
+        <span data-i18n="projects-title">Проекты</span>
+      </h2>
+      <div class="projects-grid">
+
+        <!-- Flutter Delivery -->
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fa-solid fa-bag-shopping project-icon"></i>
+            <div class="project-stars">
+              <i class="fa-regular fa-star"></i><span>3</span>
+            </div>
+          </div>
+          <h3 class="project-name" data-i18n="p1-name">Доставка продуктов</h3>
+          <p class="project-desc" data-i18n="p1-desc">Мобильное приложение для доставки продуктов питания. Каталог, корзина, оформление заказа. Написано на Dart + Flutter.</p>
+          <div class="project-footer">
+            <span class="project-lang">
+              <span class="lang-dot dart-dot"></span>Dart / Flutter
+            </span>
+          </div>
+        </div>
+
+        <!-- Court Game -->
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fa-solid fa-scale-balanced project-icon"></i>
+            <div class="project-stars">
+              <i class="fa-regular fa-star"></i><span>2</span>
+            </div>
+          </div>
+          <h3 class="project-name" data-i18n="p2-name">Игра: Судья</h3>
+          <p class="project-desc" data-i18n="p2-desc">Текстовая игра-симулятор судебного заседания. Ты — судья, выноси приговоры и следи за репутацией.</p>
+          <div class="project-footer">
+            <span class="project-lang">
+              <span class="lang-dot dart-dot"></span>Dart / Flutter
+            </span>
+          </div>
+        </div>
+
+        <!-- Alchemist Game -->
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fa-solid fa-flask-vial project-icon"></i>
+            <div class="project-stars">
+              <i class="fa-regular fa-star"></i><span>4</span>
+            </div>
+          </div>
+          <h3 class="project-name" data-i18n="p3-name">Игра: Алхимик</h3>
+          <p class="project-desc" data-i18n="p3-desc">Игра про алхимика — смешивай элементы, создавай зелья и открывай новые рецепты. Прогрессия и крафтинг.</p>
+          <div class="project-footer">
+            <span class="project-lang">
+              <span class="lang-dot dart-dot"></span>Dart / Flutter
+            </span>
+          </div>
+        </div>
+
+        <!-- Hello World -->
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fa-solid fa-code project-icon"></i>
+            <div class="project-stars">
+              <i class="fa-regular fa-star"></i><span>1</span>
+            </div>
+          </div>
+          <h3 class="project-name" data-i18n="p4-name">Hello World</h3>
+          <p class="project-desc" data-i18n="p4-desc">Первый веб-проект. Интерактивная страница с кнопкой и JavaScript-событием.</p>
+          <div class="project-footer">
+            <span class="project-lang">
+              <span class="lang-dot js-dot"></span>JavaScript
+            </span>
+            <div class="project-links">
+              <a href="../index.html" class="project-link" title="Open">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">04.</span>
+        <span data-i18n="contact-title">Контакты</span>
+      </h2>
+      <p class="contact-intro" data-i18n="contact-intro">Хочешь связаться? Найди меня здесь:</p>
+      <div class="contact-grid">
+        <a href="https://github.com/whyzubaaa" target="_blank" class="contact-card" rel="noopener noreferrer">
+          <i class="fa-brands fa-github contact-icon"></i>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-handle">@whyzubaaa</span>
+        </a>
+        <a href="https://t.me/whymrdl" target="_blank" class="contact-card" rel="noopener noreferrer">
+          <i class="fa-brands fa-telegram contact-icon tg-icon"></i>
+          <span class="contact-label">Telegram</span>
+          <span class="contact-handle">@whymrdl</span>
+        </a>
+        <a href="mailto:osnzubair@gmail.com" class="contact-card">
+          <i class="fa-solid fa-envelope contact-icon mail-icon"></i>
+          <span class="contact-label">Email</span>
+          <span class="contact-handle">osnzubair@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      <span class="logo-bracket">&lt;</span>Zubair<span class="logo-bracket">/&gt;</span>
+      &nbsp;·&nbsp; <span data-i18n="footer-made">Сделано с</span>
+      <i class="fa-solid fa-heart" style="color:#f85149"></i> JS
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
