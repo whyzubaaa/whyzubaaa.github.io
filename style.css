@@ -461,15 +461,9 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 1.8rem;
 }
-.project-icon { color: var(--text-muted); font-size: 1.1rem; }
-.project-stars {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
+.project-icon { color: var(--text-muted); font-size: 1.2rem; }
 
 .project-name {
   font-size: 0.95rem;
